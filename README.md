@@ -1,4 +1,4 @@
-#LTS Vitro Authorities Pilot
+LTS Vitro Authorities Pilot
 ========
 
 This is an experimental project in the Cornell Library Technical Services Department. It hopes to address the issues around managing local and external cultural heritage institution authorities in a complex library technology, repository, and data ecosystem.
@@ -42,7 +42,6 @@ Project Goals
     - MARC dataset managed in a Voyager ILS
     - SharedShelf instance
     - Linked Data for Production Project Native RDF Cataloging Client
-    - 
 
 Installation
 ------------
