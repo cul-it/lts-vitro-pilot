@@ -11,6 +11,7 @@ Part of this management effort includes the use of [Vitro](https://github.com/vi
 - OCLC Virtual International Authority File
 - Wikidata
 - Local authorities created originally in an Artstor SharedShelf instance
+- local authorities created originally in a local repository project/system
 - Geonames
 - Getty Art and Authorities Thesaurus
 - Getty United List of Artist Names
@@ -41,7 +42,7 @@ Project Goals
     - Fedora 4 instance feeding into Hydra / Curation Concerns
     - MARC dataset managed in a Voyager ILS
     - SharedShelf instance
-    - Linked Data for Production Project Native RDF Cataloging Client
+    - [Linked Data for Production Project Native RDF Cataloging Client](https://github.com/ld4l-labs/vitrolib)
 
 Installation
 ------------
