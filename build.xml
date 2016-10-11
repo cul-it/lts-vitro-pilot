@@ -2,12 +2,12 @@
 
 <!-- $This file is distributed under the terms of the license in /doc/license.txt$ -->
 
-<!-- ====================================================================== 
+<!-- ======================================================================
 	 Build script for the NIH VIVO product.
-	 
+
 	 The build.properties file contains build properties
 	 The runtime.properties file contains runtime properties.
-	     
+
 	 The required build properties are:
 	 	vitroCore.dir
 	    webapp.name
@@ -15,11 +15,11 @@
 	    vitro.home
 	    tomcat.home
 	     ====================================================================== -->
-<project name="vitrolib" default="describe">
+<project name="vitro" default="describe">
 
-	<!-- 
-		The build directory goes in the product directory. 
-		Everything else hangs from the build directory. 
+	<!--
+		The build directory goes in the product directory.
+		Everything else hangs from the build directory.
 	-->
 	<property name="build.dir" location="./.build" />
 	<property name="appbase.dir" location="${build.dir}/appBase" />
@@ -39,19 +39,19 @@
 	<fail unless="vitro.core.dir" message="${build.properties.file} must contain a value for vitro.core.dir" />
 
 	<!--
-		Base it all on the core build file. 
+		Base it all on the core build file.
 	-->
 	<import file="${vitro.core.dir}/webapp/build.xml" />
 
-	<!-- - - - - - - - - - - - - - - - - - 
-          target: prepare                      
-          
-          Override the core version, so we can merge the two levels before building.                      
+	<!-- - - - - - - - - - - - - - - - - -
+          target: prepare
+
+          Override the core version, so we can merge the two levels before building.
          - - - - - - - - - - - - - - - - - -->
 	<target name="prepare" depends="product-prepare,vitroCore.prepare" />
 
-	<!-- - - - - - - - - - - - - - - - - - 
-          target: product-prepare                      
+	<!-- - - - - - - - - - - - - - - - - -
+          target: product-prepare
          - - - - - - - - - - - - - - - - - -->
 	<target name="product-prepare">
 		<mkdir dir="${appbase.dir}" />
@@ -96,23 +96,23 @@
 
 	<import file="${vitro.core.dir}/webapp/build.xml" />
 
-	<!-- ================================= 
-	      target: revisionInfo              
-	     
-	      Override the core version, to get the 2-level effect.                      
+	<!-- =================================
+	      target: revisionInfo
+
+	      Override the core version, to get the 2-level effect.
 	     ================================= -->
 	<target name="revisionInfo" depends="vitroCore.revisionInfo" unless="skipinfo" description="--> Store revision info in build">
 		<addRevisionInfoLine productName="${ant.project.name}" productCheckoutDir="${basedir}" />
 	</target>
 
-	<!-- ================================= 
-          target: licenser             
-          
+	<!-- =================================
+          target: licenser
+
           In regular use, checks that all appropriate source files have license tags.
           At release time, applies license text to source files.
           The files are handled as properties so they can be overridden from the command line, if desired.
-	     
-	      Override the core version, to get the 2-level effect.                      
+
+	      Override the core version, to get the 2-level effect.
          ================================= -->
 	<target name="licenser" description="--> Check source files for licensing tags">
 		<property name="licenser.product.properties.file" location="./config/licenser/licenser.properties" />
@@ -121,8 +121,8 @@
 		<runLicenserScript productname="Vitro core" propertiesfile="${licenser.core.properties.file}" />
 	</target>
 
-	<!-- ================================= 
-          target: deployTestApp              
+	<!-- =================================
+          target: deployTestApp
          ================================= -->
 	<target name="deployTestApp" depends="deployProperties" description="description">
 		<property name="testApp.webapp.dir" value="${tomcat.home}/webapps/testApp" />
@@ -133,5 +133,5 @@
 			<fileset dir="${testApp.source.dir}" />
 		</sync>
 	</target>
-	
+
 </project>

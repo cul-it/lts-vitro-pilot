@@ -20,3 +20,6 @@ Thumbs.db
 venv
 node_modules
 .sass-cache
+build.properties
+config/applicationSetup.n3
+config/runtime.properties

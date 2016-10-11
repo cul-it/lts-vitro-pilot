@@ -1,0 +1,16 @@
+/* $This file is distributed under the terms of the license in /doc/license.txt$ */
+
+/****************************************
+****************************************
+             
+VitroLib theme: screen styles
+
+
+*****************************************
+*****************************************/
+
+@charset "UTF-8";
+
+@import url("reset.css");
+@import url("vitrolibTheme.css");
+
