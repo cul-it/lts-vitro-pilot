@@ -1,0 +1,3 @@
+[submodule "Vitro"]
+	path = Vitro
+	url = https://github.com/vivo-project/Vitro.git
