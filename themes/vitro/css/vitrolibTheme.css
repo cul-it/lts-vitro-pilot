@@ -27,7 +27,7 @@ body {
     margin: 0 auto;
 }
 body {
-   background: #fff;
+   background: #fff url(../images/header-background.gif) center 0 repeat-x;
 }
 a {
     color: #47B6D0;
@@ -425,21 +425,21 @@ hr.formDivider {
     width: 970px;
     height: 114px;
     margin: 0 auto;
-    background-color: #b31b1b;
 }
-/* BRANDING ------>  */
+/* BRANDING ------> (commenting out until Authorities Pilot logo is chosen)
 h1.vitro-logo {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 184px;
+    height: 90px;
     top: 8px;
     left: 0;
+    background: url(../images/VitroLib-logo.png) 0 0 no-repeat;
 }
 h1.vitro-logo a {
     display: block;
     width: 386px;
     height: 59px;
-}
+} */
 /* HEADER NAV------>  */
 ul#header-nav {
     float: right;
