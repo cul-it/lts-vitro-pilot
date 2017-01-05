@@ -1,17 +1,20 @@
-# $This file is distributed under the terms of the license in /doc/license.txt$ 
+# $This file is distributed under the terms of the license in /doc/license.txt$
 
 @prefix about: <http://vitro.mannlib.cornell.edu/ns/default/about#> .
 
 about:ABOUTDG
     a   <java:edu.cornell.mannlib.vitro.webapp.utils.dataGetter.FixedHTMLDataGetter> ;
     <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#htmlValue>
-        """<h2>About VitroLib</h2>
+        """<h2>About Vito Authorities Pilot</h2>
         <div class=\"pageGroupBody\" id=\"aboutText\"><p></p>
 
-        <p>VitroLib is an ontology-based cataloging editor enabling manual cataloging in RDF based on a generalized bibliographic ontology with extensions for specialized cataloging. Built on Vitro, a generalized semantic web ontology and instance editor with customizable browsing, VitroLib is a joint product of the Mellon-funded Linked Data for Libraries Labs and Linked Data for Production projects.
+        <p>This is an experimental project in the Cornell Library Technical Services Department. It hopes to address the issues around managing local and external cultural heritage institution authorities in a complex library technology, repository, and data ecosystem.
         </p>
 
-        <p>See more information on the <a href=\"http://ld4l.org\">LD4L Project site</a>.</p></div>
+        <p>Part of this management effort includes the use of Vitro, the technology behind the VIVO Project, to work with a to be determined aggregated cultural heritage institution authorities and external data entities data model. This work is based on using RDF for integration, linking, expansion and querying of this aggregated and enhanced authorities system.
+        </p>
+
+        <p>See more information on the <a href=\"https://github.com/cul-it/lts-vitro-pilot\">Vitro Authorities Pilot GitHub</a>.</p></div>
         """@en ;
         <http://vitro.mannlib.cornell.edu/ontologies/display/1.1#saveToVar>
                 "aboutPage" .
