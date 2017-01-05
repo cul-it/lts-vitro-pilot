@@ -17,6 +17,10 @@ Thumbs.db
 *.out
 
 # Application specific files
+.build/
 venv
 node_modules
 .sass-cache
+build.properties
+config/applicationSetup.n3
+config/runtime.properties

@@ -1,0 +1,323 @@
+@prefix culauth: <http://vitropilot.internal.library.cornell.edu/vitro/> .
+@prefix bf:      <http://id.loc.gov/ontologies/bibframe/> .
+@prefix dc:      <http://purl.org/dc/elements/1.1/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix edm:     <http://www.europeana.eu/schemas/edm/> .
+@prefix event:   <http://purl.org/NET/c4dm/event.owl#> .
+@prefix foaf:    <http://xmlns.com/foaf/0.1/> .
+@prefix gn:      <http://www.geonames.org/ontology#> .
+@prefix lexvo:   <http://lexvo.org/ontology#> .
+@prefix mads:    <http://www.loc.gov/mads/rdf/v1#> .
+@prefix owl:     <http://www.w3.org/2002/07/owl#> .
+@prefix prov:    <http://www.w3.org/ns/prov#> .
+@prefix rdfs:    <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix schema:  <http://schema.org/> .
+@prefix skos:    <http://www.w3.org/2004/02/skos/core#> .
+@prefix sw:      <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix vitro:   <http://vitro.mannlib.cornell.edu/ns/vitro/0.7#> .
+@prefix wgs84:   <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix xsd:     <http://www.w3.org/2001/XMLSchema#> .
+
+
+##### ONTOLOGY METADATA #####
+
+<http://id.loc.gov/ontologies/bibframe/>
+    rdfs:label "BIBFRAME"@en-US ;
+    vitro:ontologyPrefixAnnot "bf"^^xsd:string .
+
+<http://purl.org/dc/elements/1.1/>
+    rdfs:label "DC Elements"@en-US ;
+    vitro:ontologyPrefixAnnot "dc"^^xsd:string .
+
+<http://purl.org/dc/terms/>
+    rdfs:label "DC Terms"@en-US ;
+    vitro:ontologyPrefixAnnot "dcterms"^^xsd:string .
+
+<http://www.europeana.eu/schemas/edm/>
+    rdfs:label "Europeana Data Model"@en-US ;
+    vitro:ontologyPrefixAnnot "edm"^^xsd:string .
+
+<http://purl.org/NET/c4dm/event.owl#>
+    rdfs:label "Event Model"@en-US ;
+    vitro:ontologyPrefixAnnot "event"^^xsd:string .
+
+<http://xmlns.com/foaf/0.1/>
+    rdfs:label "FOAF (Friend of a Friend)"@en-US ;
+    vitro:ontologyPrefixAnnot "foaf"^^xsd:string .
+
+<http://www.geonames.org/ontology#>
+    rdfs:label "Geonames"@en-US ;
+    vitro:ontologyPrefixAnnot "gn"^^xsd:string .
+
+<http://lexvo.org/ontology#>
+    rdfs:label "LexVo"@en-US ;
+    vitro:ontologyPrefixAnnot "lexvo"^^xsd:string .
+
+<http://www.loc.gov/mads/rdf/v1#>
+    rdfs:label "MADS/RDF"@en-US ;
+    vitro:ontologyPrefixAnnot "madsrdf"^^xsd:string .
+
+<http://www.w3.org/2002/07/owl#>
+    rdfs:label "OWL (Web Ontology Language)"@en-US ;
+    vitro:ontologyPrefixAnnot "owl"^^xsd:string .
+
+<http://www.w3.org/ns/prov#>
+    rdfs:label "PROV-O (Provenance Ontology)"@en-US ;
+    vitro:ontologyPrefixAnnot "prov"^^xsd:string .
+
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+    rdfs:label "RDF"@en-US ;
+    vitro:ontologyPrefixAnnot "rdf"^^xsd:string .
+
+<http://www.w3.org/2000/01/rdf-schema#>
+    rdfs:label "RDFS"@en-US ;
+    vitro:ontologyPrefixAnnot "rdfs"^^xsd:string .
+
+<http://schema.org/>
+    rdfs:label "Schema.org"@en-US ;
+    vitro:ontologyPrefixAnnot "schema"^^xsd:string .
+
+<http://www.w3.org/2004/02/skos/core#>
+    rdfs:label "SKOS (Simple Knowledge Organization System)"@en-US ;
+    vitro:ontologyPrefixAnnot "skos"^^xsd:string .
+
+<http://vitro.mannlib.cornell.edu/ns/vitro/public>
+    rdfs:label "Vitro Public Ontology"@en-US ;
+    vitro:ontologyPrefixAnnot "vitro-public"^^xsd:string .
+
+<http://vivoweb.org/ontology/core#>
+     rdfs:label "VIVO Core"@en-US ;
+     vitro:ontologyPrefixAnnot "vivo"^^xsd:string .
+
+<http://www.w3.org/2003/06/sw-vocab-status/ns#>
+    rdfs:label "SemWeb Vocab Status Ontology"@en-US ;
+    vitro:ontologyPrefixAnnot "vs"^^xsd:string .
+
+<http://www.w3.org/2003/01/geo/wgs84_pos#>
+    rdfs:label "WGS 84"@en-US ;
+    vitro:ontologyPrefixAnnot "wgs84"^^xsd:string .
+
+<http://www.w3.org/2001/XMLSchema#>
+    rdfs:label "XML Schema"@en-US ;
+    vitro:ontologyPrefixAnnot "xsd"^^xsd:string .
+
+
+##### CLASSGROUP ASSIGNMENTS #####
+
+##
+## Agents ##
+##
+
+foaf:Agent
+    vitro:inClassGroup culauth:vitroClassGroupagents .
+
+##
+## PEOPLE ##
+##
+
+schema:Person
+    vitro:inClassGroup culauth:vitroClassGrouppeople .
+
+
+##
+## ORGANIZATIONS ##
+##
+
+foaf:Organization
+    vitro:inClassGroup culauth:vitroClassGrouporganizations> .
+
+
+##
+## GROUPS ##
+##
+
+foaf:Group
+    vitro:inClassGroup culauth:vitroClassGroupgroups .
+
+schema:PerformingGroup
+    vitro:inClassGroup culauth:vitroClassGroupgroups .
+
+
+##
+## AUTHORITIES ##
+##
+
+madsrdf:Authority
+    vitro:inClassGroup culauth:vitroClassGroupauthorities .
+
+##
+## EVENTS ##
+##
+
+event:Event
+    vitro:inClassGroup culauth:vitroClassGroupevents .
+
+schema:Event
+    vitro:inClassGroup culauth:vitroClassGroupevents .
+
+
+##
+## PLACES ##
+##
+
+edm:Place
+    vitro:inClassGroup culauth:vitroClassGroupplaces .
+
+schema:Place
+    vitro:inClassGroup culauth:vitroClassGroupplaces .
+
+
+##### PROPERTY CONFIGURATION #####
+
+# Authority properties
+madsrdf:authoritativeLabel
+    vitro:inPropertyGroupAnnot
+        <http://vitropilot.internal.library.cornell.edu/vitro/vitroPropertyGroupauthorities> .
+
+madsrdf:hasSource
+    vitro:inPropertyGroupAnnot
+        <http://vitropilot.internal.library.cornell.edu/vitro/vitroPropertyGroupauthorities> .
+
+madsrdf:identifiesRWO
+    vitro:inPropertyGroupAnnot
+        <http://vitropilot.internal.library.cornell.edu/vitro/vitroPropertyGroupauthorities> .
+
+dct:modified
+    vitro:inPropertyGroupAnnot
+        <http://vitropilot.internal.library.cornell.edu/vitro/vitroPropertyGroupauthorities> .
+
+madsrdf:scopeNote
+    vitro:inPropertyGroupAnnot
+        <http://vitropilot.internal.library.cornell.edu/vitro/vitroPropertyGroupauthorities> .
+
+dcterms:source
+    vitro:inPropertyGroupAnnot
+        <http://vitropilot.internal.library.cornell.edu/vitro/vitroPropertyGroupauthorities> .
+
+vs:term_status
+    vitro:inPropertyGroupAnnot
+        <http://vitropilot.internal.library.cornell.edu/vitro/vitroPropertyGroupauthorities> .
+
+# Person properties
+
+schema:affiliation
+    vitro:inPropertyGroupAnnot
+        <http://vitropilot.internal.library.cornell.edu/vitro/vitroPropertyGrouppeople> .
+
+schema:birthDate
+    vitro:inPropertyGroupAnnot
+        <http://vitropilot.internal.library.cornell.edu/vitro/vitroPropertyGrouppeople> .
+
+schema:birthPlace
+    vitro:inPropertyGroupAnnot
+        <http://vitropilot.internal.library.cornell.edu/vitro/vitroPropertyGrouppeople> .
+
+schema:deathDate
+    vitro:inPropertyGroupAnnot
+        <http://vitropilot.internal.library.cornell.edu/vitro/vitroPropertyGrouppeople> .
+
+schema:deathPlace
+    vitro:inPropertyGroupAnnot
+        <http://vitropilot.internal.library.cornell.edu/vitro/vitroPropertyGrouppeople> .
+
+schema:familyName
+    vitro:inPropertyGroupAnnot
+        <http://vitropilot.internal.library.cornell.edu/vitro/vitroPropertyGrouppeople> .
+
+schema:gender
+    vitro:inPropertyGroupAnnot
+        <http://vitropilot.internal.library.cornell.edu/vitro/vitroPropertyGrouppeople> .
+
+schema:givenName
+    vitro:inPropertyGroupAnnot
+        <http://vitropilot.internal.library.cornell.edu/vitro/vitroPropertyGrouppeople> .
+
+# Event properties
+
+event:agent
+    vitro:inPropertyGroupAnnot
+        <http://vitropilot.internal.library.cornell.edu/vitro/vitroPropertyGroupevents> .
+
+# Place properties
+
+wgs84_pos:alt
+    vitro:inPropertyGroupAnnot
+        <http://vitropilot.internal.library.cornell.edu/vitro/vitroPropertyGroupplaces> .
+
+gn:countryCode
+    vitro:inPropertyGroupAnnot
+        <http://vitropilot.internal.library.cornell.edu/vitro/vitroPropertyGroupplaces> .
+
+wgs84_pos:lat
+    vitro:inPropertyGroupAnnot
+        <http://vitropilot.internal.library.cornell.edu/vitro/vitroPropertyGroupplaces> .
+
+wgs84_pos:long
+    vitro:inPropertyGroupAnnot
+        <http://vitropilot.internal.library.cornell.edu/vitro/vitroPropertyGroupplaces> .
+
+gn:parentFeature
+    vitro:inPropertyGroupAnnot
+        <http://vitropilot.internal.library.cornell.edu/vitro/vitroPropertyGroupplaces> .
+
+# Shared properties
+
+## Generic Identifying Information
+
+skos:altLabel
+    vitro:inPropertyGroupAnnot
+        <http://vitropilot.internal.library.cornell.edu/vitro/vitroPropertyGroupidentity> .
+
+foaf:basedNear
+    vitro:inPropertyGroupAnnot
+        <http://vitropilot.internal.library.cornell.edu/vitro/vitroPropertyGroupidentity> .
+
+dcterms:created
+    vitro:inPropertyGroupAnnot
+        <http://vitropilot.internal.library.cornell.edu/vitro/vitroPropertyGroupidentity> .
+
+dcterms:date
+    vitro:inPropertyGroupAnnot
+        <http://vitropilot.internal.library.cornell.edu/vitro/vitroPropertyGroupidentity> .
+
+dcterms:description
+    vitro:inPropertyGroupAnnot
+        <http://vitropilot.internal.library.cornell.edu/vitro/vitroPropertyGroupidentity> .
+
+foaf:homepage
+    vitro:inPropertyGroupAnnot
+        <http://vitropilot.internal.library.cornell.edu/vitro/vitroPropertyGroupidentity> .
+
+foaf:knows
+    vitro:inPropertyGroupAnnot
+        <http://vitropilot.internal.library.cornell.edu/vitro/vitroPropertyGroupidentity> .
+
+rdfs:label
+    vitro:inPropertyGroupAnnot
+        <http://vitropilot.internal.library.cornell.edu/vitro/vitroPropertyGroupidentity> .
+
+foaf:mbox
+    vitro:inPropertyGroupAnnot
+        <http://vitropilot.internal.library.cornell.edu/vitro/vitroPropertyGroupidentity> .
+
+foaf:name
+    vitro:inPropertyGroupAnnot
+        <http://vitropilot.internal.library.cornell.edu/vitro/vitroPropertyGroupidentity> .
+    vitro:displayRankAnnot "10"^^xsd:int .
+
+schema:nationality
+    vitro:inPropertyGroupAnnot
+        <http://vitropilot.internal.library.cornell.edu/vitro/vitroPropertyGroupidentity> .
+
+foaf:topic_interest
+    vitro:inPropertyGroupAnnot
+        <http://vitropilot.internal.library.cornell.edu/vitro/vitroPropertyGroupidentity> .
+
+## Identifiers
+bf2:hasIdentifier
+    vitro:inPropertyGroupAnnot
+        <http://vitropilot.internal.library.cornell.edu/vitro/vitroPropertyGroupidentifiers> .
+
+madsrdf:isIdentifiedByAuthority
+    vitro:inPropertyGroupAnnot
+        <http://vitropilot.internal.library.cornell.edu/vitro/vitroPropertyGroupidentifiers> .

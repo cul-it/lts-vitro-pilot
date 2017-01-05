@@ -1,0 +1,7 @@
+replace_all(conceptDetailInfo.displayText, " \[\d+\] - Cornell", "")
+retain_field(conceptDetailInfo)
+move_field(conceptDetailInfo,m)
+move_field(m.conceptId,_id)
+prepend(_id,"http://example.org/")
+move_field(m.displayText,dc_title)
+remove_field(m)
